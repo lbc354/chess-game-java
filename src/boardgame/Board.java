@@ -31,4 +31,14 @@ public class Board {
 		this.columns = columns;
 	}
 //	não criamos de pieces pq não vamos retornar a matriz inteira, apenas uma peça por vez
+	
+	
+	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }
