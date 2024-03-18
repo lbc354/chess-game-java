@@ -1,6 +1,5 @@
 package chess;
 
-import boardgame.BoardException;
 import boardgame.Position;
 
 public class ChessPosition {
@@ -9,7 +8,7 @@ public class ChessPosition {
 	
 	public ChessPosition(char column, int row) {
 		if (column < 'a' || column > 'h' || row < 1 || row > 8) {
-			throw new BoardException("Error instantiating ChessPosition: valid values are from a1 to h8");
+			throw new ChessException("Error instantiating ChessPosition: valid values are from a1 to h8");
 		}
 		this.column = column;
 		this.row = row;
