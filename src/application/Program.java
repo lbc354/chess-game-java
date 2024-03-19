@@ -19,10 +19,17 @@ public class Program {
 			try {
 				UI.clearScreen();
 				UI.printBoard(cm.getPieces());
+				
 				System.out.print("\nEnter source position: ");
 				ChessPosition source = UI.readChessPosition(sc);
+				
+				boolean[][] possibleMoves = cm.possibleMoves(source);
+				UI.clearScreen();
+				UI.printBoard(cm.getPieces(), possibleMoves);
+				
 				System.out.print("\nEnter target position: ");
 				ChessPosition target = UI.readChessPosition(sc);
+				
 				ChessPiece capturedPiece = cm.performChessMove(source, target);
 			} catch (ChessException e) {
 				System.out.println(e.getMessage() + " (PRESS ENTER)");
