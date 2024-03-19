@@ -25,11 +25,11 @@ public class Program {
 				ChessPosition target = UI.readChessPosition(sc);
 				ChessPiece capturedPiece = cm.performChessMove(source, target);
 			} catch (ChessException e) {
-				System.out.println(e.getMessage());
+				System.out.println(e.getMessage() + " (PRESS ENTER)");
 				// programa vai aguardar clicar no enter
 				sc.nextLine();
 			} catch (InputMismatchException e) {
-				System.out.println(e.getMessage());
+				System.out.println(e.getMessage() + " (PRESS ENTER)");
 				// programa vai aguardar clicar no enter
 				sc.nextLine();
 			}
